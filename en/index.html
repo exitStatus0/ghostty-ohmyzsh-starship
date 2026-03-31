@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>English Guide | Ghostty + Oh My Zsh + Starship</title>
+        <meta
+            name="description"
+            content="English guide page for a modern DevOps terminal setup with Ghostty, Zsh, Oh My Zsh, Starship, and AI-assisted configuration."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../assets/site.css" />
+        <script src="../assets/site.js" defer></script>
+    </head>
+    <body>
+        <div class="site-shell page">
+            <header class="site-header">
+                <div class="site-header__inner">
+                    <a class="brand" href="../">
+                        <span class="brand__mark">M</span>
+                        <span>Mentor Yarick</span>
+                    </a>
+                    <nav class="nav">
+                        <a href="../">Home</a>
+                        <a href="#modules">Modules</a>
+                        <a href="#ai">AI Angle</a>
+                        <a href="../mentring-offer/">Mentoring</a>
+                    </nav>
+                    <div class="lang-switch" aria-label="Language switch">
+                        <a class="is-active" href="./" aria-current="page">EN</a>
+                        <a href="../other/">RU</a>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section class="page-hero">
+                    <div class="page-hero__grid">
+                        <article class="panel panel--hero reveal">
+                            <span class="panel__glow panel__glow--orange"></span>
+                            <span class="panel__glow panel__glow--teal"></span>
+                            <span class="eyebrow">English setup guide</span>
+                            <h1>
+                                Ghostty + Oh My Zsh + Starship for DevOps and software development
+                            </h1>
+                            <p>
+                                This page turns the written guide into a cleaner GitHub Pages
+                                reading experience. It keeps the message focused: build a terminal
+                                that feels modern, stays fast, and remains practical for real work.
+                            </p>
+                            <div class="pill-row">
+                                <span class="pill">Ghostty</span>
+                                <span class="pill">Zsh</span>
+                                <span class="pill">Oh My Zsh</span>
+                                <span class="pill">Starship</span>
+                                <span class="pill">DevOps workflow</span>
+                            </div>
+                            <div class="button-row">
+                                <a
+                                    class="button button--primary"
+                                    href="ghostty-ohmyzsh-starship-dev-setup.md"
+                                    >Read Markdown Source</a
+                                >
+                                <a class="button button--secondary" href="../mentring-offer/"
+                                    >Mentoring Offer</a
+                                >
+                            </div>
+                        </article>
+
+                        <aside class="code-panel panel reveal">
+                            <h3>Starter install</h3>
+                            <pre><code>brew install ghostty zsh starship \
+  zoxide fzf eza bat fd ripgrep jq yq direnv \
+  kubectl kubectx k9s terraform lazygit</code></pre>
+                        </aside>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-heading reveal">
+                        <h2>Why this stack works</h2>
+                        <p>
+                            The project is intentionally not a maximalist dotfiles dump. It is a
+                            balanced setup for people who need terminal speed, readable context, and
+                            a workflow that can be reused across machines.
+                        </p>
+                    </div>
+
+                    <div class="feature-grid">
+                        <article class="feature-card reveal">
+                            <h3>Ghostty</h3>
+                            <p>
+                                Fast, modern terminal UX with strong rendering and a polished feel.
+                            </p>
+                        </article>
+                        <article class="feature-card reveal">
+                            <h3>Oh My Zsh</h3>
+                            <p>
+                                Shell structure, practical plugins, and easier day-to-day
+                                maintenance.
+                            </p>
+                        </article>
+                        <article class="feature-card reveal">
+                            <h3>Starship</h3>
+                            <p>
+                                A prompt that stays portable, clean, and easier to reason about than
+                                heavy shell themes.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="modules">
+                    <div class="section-heading reveal">
+                        <h2>The guide structure</h2>
+                        <p>
+                            The full write-up goes deeper, but these are the core blocks that define
+                            the learning path.
+                        </p>
+                    </div>
+
+                    <div class="module-grid">
+                        <article class="module-card reveal">
+                            <h3>1. Base tools</h3>
+                            <p>
+                                Install the terminal, shell, prompt, and the high-value CLI tooling.
+                            </p>
+                        </article>
+                        <article class="module-card reveal">
+                            <h3>2. Ghostty setup</h3>
+                            <p>
+                                Font choice, shell integration, theme simplicity, and a minimal
+                                config.
+                            </p>
+                        </article>
+                        <article class="module-card reveal">
+                            <h3>3. Oh My Zsh</h3>
+                            <p>
+                                Framework setup without prompt-theme conflicts once Starship is
+                                enabled.
+                            </p>
+                        </article>
+                        <article class="module-card reveal">
+                            <h3>4. Starship</h3>
+                            <p>Prompt initialization and a clean config that can live in Git.</p>
+                        </article>
+                        <article class="module-card reveal">
+                            <h3>5. Plugins and tools</h3>
+                            <p>
+                                Pick fewer, better tools for Git, Kubernetes, Terraform, and cloud
+                                work.
+                            </p>
+                        </article>
+                        <article class="module-card reveal">
+                            <h3>6. Daily workflow</h3>
+                            <p>
+                                Aliases, helper functions, validation, and practical
+                                troubleshooting.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="ai">
+                    <div class="section-heading reveal">
+                        <h2>Where AI actually helps</h2>
+                        <p>
+                            AI is useful here because terminal customization has a lot of small
+                            decisions. The right use of AI is not to generate random config, but to
+                            shorten the path to a setup that fits your role and habits.
+                        </p>
+                    </div>
+
+                    <div class="detail-grid">
+                        <article class="detail-card reveal">
+                            <h3>Decision support</h3>
+                            <ul class="detail-list">
+                                <li>Choose the right plugin set for DevOps or development work.</li>
+                                <li>Compare prompt modules and remove overlapping tools.</li>
+                                <li>Keep the stack light instead of noisy.</li>
+                            </ul>
+                        </article>
+                        <article class="detail-card reveal">
+                            <h3>Configuration help</h3>
+                            <ul class="detail-list">
+                                <li>Draft `.zshrc` and `starship.toml` faster.</li>
+                                <li>Explain every shell line before you keep it.</li>
+                                <li>Adapt the setup to macOS or Linux differences.</li>
+                            </ul>
+                        </article>
+                        <article class="detail-card reveal">
+                            <h3>Troubleshooting</h3>
+                            <ul class="detail-list">
+                                <li>
+                                    Investigate startup time, fonts, prompt lag, and plugin
+                                    conflicts.
+                                </li>
+                                <li>
+                                    Turn setup knowledge into reusable documentation and video
+                                    material.
+                                </li>
+                                <li>
+                                    Convert a private workflow into a public-facing educational
+                                    asset.
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="cta-band reveal">
+                        <h3>Use the guide as content, not just documentation.</h3>
+                        <p>
+                            This page is now strong enough to support a YouTube intro, an
+                            educational repo, and a personal brand entry point. Pair it with the
+                            mentoring page if you want a clear next step for viewers who need help.
+                        </p>
+                        <div class="button-row">
+                            <a class="button button--primary" href="../mentring-offer/"
+                                >Open Mentoring Page</a
+                            >
+                            <a class="button button--secondary" href="../README.md">Open README</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
