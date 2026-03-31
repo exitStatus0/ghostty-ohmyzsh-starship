@@ -1,226 +1,265 @@
 <!doctype html>
 <html lang="en" data-lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov</title>
-    <meta
-      name="description"
-      content="DevOpus project hub for the Ghostty, Oh My Zsh, and Starship setup. Start from the README, continue into the English or Other guide, and open the mentoring offer when you want direct help."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="assets/site.css">
-    <script src="assets/site.js" defer></script>
-  </head>
-  <body>
-    <div class="site-shell page">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="./">
-            <span class="brand__mark">D</span>
-            <span>DevOpus</span>
-          </a>
-          <nav class="nav">
-            <a href="#readme">README</a>
-            <a href="#guides">Guides</a>
-            <a href="#mentoring">Mentoring</a>
-            <a href="./en/">EN</a>
-            <a href="./other/">Other</a>
-          </nav>
-          <div class="lang-switch" aria-label="Language switch">
-            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-            <button type="button" data-set-lang="ru" aria-pressed="false">OTHER</button>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov
+        </title>
+        <meta
+            name="description"
+            content="DevOpus project hub for the Ghostty, Oh My Zsh, and Starship setup. Start from the README, continue into the English or Other guide, and open the mentoring offer when you want direct help."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/site.css" />
+        <script src="assets/site.js" defer></script>
+    </head>
+    <body>
+        <div class="site-shell page">
+            <header class="site-header">
+                <div class="site-header__inner">
+                    <a class="brand" href="./">
+                        <span class="brand__mark">D</span>
+                        <span>DevOpus</span>
+                    </a>
+                    <nav class="nav">
+                        <a href="#readme">README</a>
+                        <a href="#guides">Guides</a>
+                        <a href="#mentoring">Mentoring</a>
+                        <a href="./en/">EN</a>
+                        <a href="./other/">Other</a>
+                    </nav>
+                    <div class="lang-switch" aria-label="Language switch">
+                        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" data-set-lang="ru" aria-pressed="false">OTHER</button>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section class="hero">
+                    <article class="panel panel--hero reveal">
+                        <span class="panel__glow panel__glow--orange"></span>
+                        <span class="panel__glow panel__glow--teal"></span>
+
+                        <div class="lang-en">
+                            <span class="eyebrow">DevOpus</span>
+                            <h1>Ghostty + Oh My Zsh + Starship</h1>
+                            <p class="lead">
+                                A simple project hub for the terminal setup. Start with the README,
+                                go deeper in the language-specific guides, and use the mentoring
+                                offer if you want direct practical help.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="button button--primary" href="./readme/">Open README</a>
+                                <a class="button button--secondary" href="./mentoring-offer/"
+                                    >Mentoring Offer</a
+                                >
+                                <a class="button button--ghost" href="./en/">English Guide</a>
+                                <a class="button button--ghost" href="./other/">Other Guide</a>
+                            </div>
+                        </div>
+
+                        <div class="lang-ru">
+                            <span class="eyebrow">DevOpus</span>
+                            <h1>Ghostty + Oh My Zsh + Starship</h1>
+                            <p class="lead">
+                                Простой hub для проекта с терминальным сетапом. Начните с README,
+                                затем переходите в language-specific guides, а если нужна прямая
+                                практическая помощь, открывайте mentoring offer.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="button button--primary" href="./readme/"
+                                    >Открыть README</a
+                                >
+                                <a class="button button--secondary" href="./mentoring-offer/"
+                                    >Mentoring Offer</a
+                                >
+                                <a class="button button--ghost" href="./en/">English Guide</a>
+                                <a class="button button--ghost" href="./other/">Other Guide</a>
+                            </div>
+                        </div>
+
+                        <div class="pill-row">
+                            <span class="pill">Ghostty</span>
+                            <span class="pill">Zsh</span>
+                            <span class="pill">Oh My Zsh</span>
+                            <span class="pill">Starship</span>
+                            <span class="pill">DevOps workflow</span>
+                        </div>
+                    </article>
+
+                    <aside class="panel panel--hero reveal">
+                        <div class="lang-en">
+                            <span class="eyebrow">Project Map</span>
+                            <h2 style="margin-bottom: 10px">What to open first</h2>
+                            <ul class="detail-list">
+                                <li>
+                                    `/readme/` for the project intro, positioning, and overview.
+                                </li>
+                                <li>`/en/` for the English guide block.</li>
+                                <li>`/other/` for the Other guide block.</li>
+                                <li>`/mentoring-offer/` for the direct mentoring page.</li>
+                            </ul>
+                        </div>
+                        <div class="lang-ru">
+                            <span class="eyebrow">Project Map</span>
+                            <h2 style="margin-bottom: 10px">Что открывать сначала</h2>
+                            <ul class="detail-list">
+                                <li>
+                                    `/readme/` для интро, позиционирования и общего обзора проекта.
+                                </li>
+                                <li>`/en/` для English guide block.</li>
+                                <li>`/other/` для Other guide block.</li>
+                                <li>`/mentoring-offer/` для страницы mentoring.</li>
+                            </ul>
+                        </div>
+
+                        <div class="quote-card" style="margin-top: 18px">
+                            <blockquote class="lang-en">
+                                DevOpus | AI Driven practical and pragmatic DevOps mentorship |
+                                Yaroslav Kostiannikov
+                            </blockquote>
+                            <blockquote class="lang-ru">
+                                DevOpus | AI Driven practical and pragmatic DevOps mentorship |
+                                Yaroslav Kostiannikov
+                            </blockquote>
+                        </div>
+                    </aside>
+                </section>
+
+                <section class="section" id="readme">
+                    <div class="section-heading reveal">
+                        <h2 class="lang-en">README first</h2>
+                        <h2 class="lang-ru">Сначала README</h2>
+                        <p class="lang-en">
+                            The README is the main entry point for the project story. It gives the
+                            overview, the value proposition, the AI angle, and the framing for the
+                            YouTube intro.
+                        </p>
+                        <p class="lang-ru">
+                            README — это главный вход в историю проекта. Там находится общий обзор,
+                            ценностное позиционирование, AI angle и framing для вступления к
+                            YouTube-видео.
+                        </p>
+                    </div>
+
+                    <div class="card-grid">
+                        <article class="card card--8 reveal">
+                            <h3 class="lang-en">Project overview and positioning</h3>
+                            <h3 class="lang-ru">Обзор проекта и позиционирование</h3>
+                            <p class="lang-en">
+                                If someone lands here for the first time, the README should explain
+                                what this setup is, why it matters, and who it is for before they
+                                dive into the detailed guide pages.
+                            </p>
+                            <p class="lang-ru">
+                                Если человек попадает сюда впервые, именно README должен объяснить,
+                                что это за сетап, зачем он нужен и для кого он сделан, до перехода к
+                                подробным guide pages.
+                            </p>
+                        </article>
+                        <article class="card card--4 reveal">
+                            <h3>README</h3>
+                            <p class="lang-en">Open the root project document.</p>
+                            <p class="lang-ru">Откройте основной документ проекта.</p>
+                            <div class="button-row">
+                                <a class="button button--primary" href="./readme/">Open README</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="guides">
+                    <div class="section-heading reveal">
+                        <h2 class="lang-en">Guides by block</h2>
+                        <h2 class="lang-ru">Гайды по блокам</h2>
+                        <p class="lang-en">
+                            The detailed information lives in separate blocks so the homepage stays
+                            clean and the deeper material stays organized.
+                        </p>
+                        <p class="lang-ru">
+                            Подробная информация вынесена в отдельные блоки, чтобы главная страница
+                            оставалась чистой, а глубокий материал был организованнее.
+                        </p>
+                    </div>
+
+                    <div class="card-grid">
+                        <article class="card card--4 reveal">
+                            <h3>English</h3>
+                            <p class="lang-en">
+                                The English block with the detailed setup guide and supporting
+                                context.
+                            </p>
+                            <p class="lang-ru">
+                                English block с подробным setup guide и дополнительным контекстом.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./en/">Open /en/</a>
+                            </div>
+                        </article>
+
+                        <article class="card card--4 reveal">
+                            <h3>Other</h3>
+                            <p class="lang-en">
+                                The Other block with the alternative-language guide material.
+                            </p>
+                            <p class="lang-ru">Other block с альтернативным guide material.</p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./other/">Open /other/</a>
+                            </div>
+                        </article>
+
+                        <article class="card card--4 reveal" id="mentoring">
+                            <h3>Mentoring Offer</h3>
+                            <p class="lang-en">
+                                Direct 1:1 help for growth, interviews, roadmap work, and technical
+                                problems.
+                            </p>
+                            <p class="lang-ru">
+                                Прямая 1:1-помощь для роста, интервью, roadmap и технических задач.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./mentoring-offer/"
+                                    >Open /mentoring-offer/</a
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="cta-band reveal">
+                        <h3 class="lang-en">Use the site in a simple order</h3>
+                        <h3 class="lang-ru">Используйте сайт в простом порядке</h3>
+                        <p class="lang-en">
+                            Start from the README. Then choose `en` or `other` depending on the
+                            block you want. If you need direct support, continue to the mentoring
+                            offer.
+                        </p>
+                        <p class="lang-ru">
+                            Начните с README. Затем выберите `en` или `other` в зависимости от
+                            нужного блока. Если нужна прямая поддержка, переходите в mentoring
+                            offer.
+                        </p>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <div class="site-footer__inner">
+                    <span
+                        >DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav
+                        Kostiannikov</span
+                    >
+                    <a href="./readme/">README</a>
+                </div>
+            </footer>
         </div>
-      </header>
-
-      <main>
-        <section class="hero">
-          <article class="panel panel--hero reveal">
-            <span class="panel__glow panel__glow--orange"></span>
-            <span class="panel__glow panel__glow--teal"></span>
-
-            <div class="lang-en">
-              <span class="eyebrow">DevOpus</span>
-              <h1>Ghostty + Oh My Zsh + Starship</h1>
-              <p class="lead">
-                A simple project hub for the terminal setup. Start with the README, go deeper in the
-                language-specific guides, and use the mentoring offer if you want direct practical help.
-              </p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./README.md">Open README</a>
-                <a class="button button--secondary" href="./mentoring-offer/">Mentoring Offer</a>
-                <a class="button button--ghost" href="./en/">English Guide</a>
-                <a class="button button--ghost" href="./other/">Other Guide</a>
-              </div>
-            </div>
-
-            <div class="lang-ru">
-              <span class="eyebrow">DevOpus</span>
-              <h1>Ghostty + Oh My Zsh + Starship</h1>
-              <p class="lead">
-                Простой hub для проекта с терминальным сетапом. Начните с README, затем переходите в
-                language-specific guides, а если нужна прямая практическая помощь, открывайте mentoring offer.
-              </p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./README.md">Открыть README</a>
-                <a class="button button--secondary" href="./mentoring-offer/">Mentoring Offer</a>
-                <a class="button button--ghost" href="./en/">English Guide</a>
-                <a class="button button--ghost" href="./other/">Other Guide</a>
-              </div>
-            </div>
-
-            <div class="pill-row">
-              <span class="pill">Ghostty</span>
-              <span class="pill">Zsh</span>
-              <span class="pill">Oh My Zsh</span>
-              <span class="pill">Starship</span>
-              <span class="pill">DevOps workflow</span>
-            </div>
-          </article>
-
-          <aside class="panel panel--hero reveal">
-            <div class="lang-en">
-              <span class="eyebrow">Project Map</span>
-              <h2 style="margin-bottom: 10px;">What to open first</h2>
-              <ul class="detail-list">
-                <li>`README.md` for the project intro, positioning, and overview.</li>
-                <li>`/en/` for the English guide block.</li>
-                <li>`/other/` for the Other guide block.</li>
-                <li>`/mentoring-offer/` for the direct mentoring page.</li>
-              </ul>
-            </div>
-            <div class="lang-ru">
-              <span class="eyebrow">Project Map</span>
-              <h2 style="margin-bottom: 10px;">Что открывать сначала</h2>
-              <ul class="detail-list">
-                <li>`README.md` для интро, позиционирования и общего обзора проекта.</li>
-                <li>`/en/` для English guide block.</li>
-                <li>`/other/` для Other guide block.</li>
-                <li>`/mentoring-offer/` для страницы mentoring.</li>
-              </ul>
-            </div>
-
-            <div class="quote-card" style="margin-top: 18px;">
-              <blockquote class="lang-en">
-                DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov
-              </blockquote>
-              <blockquote class="lang-ru">
-                DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov
-              </blockquote>
-            </div>
-          </aside>
-        </section>
-
-        <section class="section" id="readme">
-          <div class="section-heading reveal">
-            <h2 class="lang-en">README first</h2>
-            <h2 class="lang-ru">Сначала README</h2>
-            <p class="lang-en">
-              The README is the main entry point for the project story. It gives the overview, the value
-              proposition, the AI angle, and the framing for the YouTube intro.
-            </p>
-            <p class="lang-ru">
-              README — это главный вход в историю проекта. Там находится общий обзор, ценностное
-              позиционирование, AI angle и framing для вступления к YouTube-видео.
-            </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card card--8 reveal">
-              <h3 class="lang-en">Project overview and positioning</h3>
-              <h3 class="lang-ru">Обзор проекта и позиционирование</h3>
-              <p class="lang-en">
-                If someone lands here for the first time, the README should explain what this setup is,
-                why it matters, and who it is for before they dive into the detailed guide pages.
-              </p>
-              <p class="lang-ru">
-                Если человек попадает сюда впервые, именно README должен объяснить, что это за сетап,
-                зачем он нужен и для кого он сделан, до перехода к подробным guide pages.
-              </p>
-            </article>
-            <article class="card card--4 reveal">
-              <h3>README.md</h3>
-              <p class="lang-en">Open the root project document.</p>
-              <p class="lang-ru">Откройте основной документ проекта.</p>
-              <div class="button-row">
-                <a class="button button--primary" href="./README.md">Open README</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="guides">
-          <div class="section-heading reveal">
-            <h2 class="lang-en">Guides by block</h2>
-            <h2 class="lang-ru">Гайды по блокам</h2>
-            <p class="lang-en">
-              The detailed information lives in separate blocks so the homepage stays clean and the deeper
-              material stays organized.
-            </p>
-            <p class="lang-ru">
-              Подробная информация вынесена в отдельные блоки, чтобы главная страница оставалась чистой,
-              а глубокий материал был организованнее.
-            </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card card--4 reveal">
-              <h3>English</h3>
-              <p class="lang-en">The English block with the detailed setup guide and supporting context.</p>
-              <p class="lang-ru">English block с подробным setup guide и дополнительным контекстом.</p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./en/">Open /en/</a>
-              </div>
-            </article>
-
-            <article class="card card--4 reveal">
-              <h3>Other</h3>
-              <p class="lang-en">The Other block with the alternative-language guide material.</p>
-              <p class="lang-ru">Other block с альтернативным guide material.</p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./other/">Open /other/</a>
-              </div>
-            </article>
-
-            <article class="card card--4 reveal" id="mentoring">
-              <h3>Mentoring Offer</h3>
-              <p class="lang-en">Direct 1:1 help for growth, interviews, roadmap work, and technical problems.</p>
-              <p class="lang-ru">Прямая 1:1-помощь для роста, интервью, roadmap и технических задач.</p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./mentoring-offer/">Open /mentoring-offer/</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="cta-band reveal">
-            <h3 class="lang-en">Use the site in a simple order</h3>
-            <h3 class="lang-ru">Используйте сайт в простом порядке</h3>
-            <p class="lang-en">
-              Start from the README. Then choose `en` or `other` depending on the block you want. If you
-              need direct support, continue to the mentoring offer.
-            </p>
-            <p class="lang-ru">
-              Начните с README. Затем выберите `en` или `other` в зависимости от нужного блока. Если
-              нужна прямая поддержка, переходите в mentoring offer.
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <span>DevOpus | AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov</span>
-          <a href="./README.md">README</a>
-        </div>
-      </footer>
-    </div>
-  </body>
+    </body>
 </html>
