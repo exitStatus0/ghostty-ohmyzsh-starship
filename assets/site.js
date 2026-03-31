@@ -1,298 +1,221 @@
 (function () {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
+  // --- Copy button for code blocks ---
+  function addCopyButtons() {
+    document.querySelectorAll(".prose pre").forEach(function (pre) {
+      if (pre.querySelector(".copy-btn")) return;
+      var btn = document.createElement("button");
+      btn.className = "copy-btn";
+      btn.textContent = "Copy";
+      btn.addEventListener("click", function () {
+        var code = pre.querySelector("code");
+        if (!code) return;
+        var text = code.textContent || "";
+        navigator.clipboard.writeText(text).then(function () {
+          btn.textContent = "Copied!";
+          btn.classList.add("copied");
+          setTimeout(function () {
+            btn.textContent = "Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        });
       });
-    },
-    {
-      rootMargin: "0px 0px -10% 0px",
-      threshold: 0.12,
-    },
-  );
-
-  document.querySelectorAll(".reveal").forEach((element) => {
-    revealObserver.observe(element);
-  });
-
-  const page = document.querySelector("[data-markdown-source]");
-  if (!page) {
-    return;
-  }
-
-  const source = page.getAttribute("data-markdown-source");
-  const content = document.querySelector("[data-markdown-content]");
-  const toc = document.querySelector("[data-markdown-toc]");
-  const status = document.querySelector("[data-markdown-status]");
-
-  if (!source || !content) {
-    return;
-  }
-
-  fetch(source)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Unable to load markdown source.");
-      }
-
-      return response.text();
-    })
-    .then((markdown) => {
-      content.innerHTML = renderMarkdown(markdown);
-      if (status) {
-        status.remove();
-      }
-      buildToc(content, toc);
-    })
-    .catch((error) => {
-      if (status) {
-        status.textContent = error.message;
-      }
+      pre.appendChild(btn);
     });
-
-  function buildToc(root, mount) {
-    if (!mount) {
-      return;
-    }
-
-    const headings = Array.from(root.querySelectorAll("h2, h3"));
-    if (!headings.length) {
-      mount.innerHTML = '<p class="muted">No sections available.</p>';
-      return;
-    }
-
-    mount.innerHTML = headings
-      .map((heading) => {
-        const level = heading.tagName === "H2" ? "2" : "3";
-        return (
-          '<a href="#' +
-          heading.id +
-          '" data-level="' +
-          level +
-          '">' +
-          escapeHtml(heading.textContent || "") +
-          "</a>"
-        );
-      })
-      .join("");
   }
 
-  function renderMarkdown(markdown) {
-    const lines = markdown.replace(/\r/g, "").split("\n");
-    let html = "";
-    let inCode = false;
-    let codeLang = "";
-    let codeLines = [];
-    let listType = null;
-    let listItems = [];
-    let paragraphLines = [];
-    let quoteLines = [];
-    let firstH1Seen = false;
-    let headingIndex = 0;
+  // --- Markdown renderer ---
+  function renderMarkdown(md) {
+    var lines = md.replace(/\r/g, "").split("\n");
+    var html = "";
+    var inCode = false;
+    var codeLang = "";
+    var codeLines = [];
+    var listType = null;
+    var listItems = [];
+    var paraLines = [];
+    var quoteLines = [];
+    var headingIdx = 0;
 
-    function flushParagraph() {
-      if (!paragraphLines.length) {
-        return;
-      }
+    function flush() {
+      flushPara();
+      flushList();
+      flushQuote();
+    }
 
-      const paragraph = paragraphLines
-        .map((line) => line.trim())
-        .join(" ")
-        .replace(/\s{2,}/g, " ")
-        .trim();
-
-      if (paragraph) {
-        html += "<p>" + parseInline(paragraph) + "</p>";
-      }
-
-      paragraphLines = [];
+    function flushPara() {
+      if (!paraLines.length) return;
+      var p = paraLines.map(function (l) { return l.trim(); }).join(" ").trim();
+      if (p) html += "<p>" + inline(p) + "</p>";
+      paraLines = [];
     }
 
     function flushList() {
-      if (!listType || !listItems.length) {
-        return;
-      }
-
-      html +=
-        "<" +
-        listType +
-        ">" +
-        listItems.map((item) => "<li>" + parseInline(item) + "</li>").join("") +
-        "</" +
-        listType +
-        ">";
+      if (!listType || !listItems.length) return;
+      html += "<" + listType + ">" +
+        listItems.map(function (it) { return "<li>" + inline(it) + "</li>"; }).join("") +
+        "</" + listType + ">";
       listType = null;
       listItems = [];
     }
 
     function flushQuote() {
-      if (!quoteLines.length) {
-        return;
-      }
-
-      const quote = quoteLines
-        .map((line) => line.trim())
-        .join(" ")
-        .trim();
-      html += "<blockquote>" + parseInline(quote) + "</blockquote>";
+      if (!quoteLines.length) return;
+      var q = quoteLines.map(function (l) { return l.trim(); }).join(" ").trim();
+      html += "<blockquote>" + inline(q) + "</blockquote>";
       quoteLines = [];
     }
 
     function flushCode() {
-      if (!inCode) {
-        return;
-      }
-
-      const label = codeLang
-        ? '<div class="muted" style="margin-bottom: 10px; font-size: 0.82rem;">' +
-          escapeHtml(codeLang) +
-          "</div>"
+      if (!inCode) return;
+      var label = codeLang
+        ? '<span class="code-lang">' + esc(codeLang) + "</span>"
         : "";
-      html += "<pre>" + label + "<code>" + escapeHtml(codeLines.join("\n")) + "</code></pre>";
+      html += "<pre><code>" + label + esc(codeLines.join("\n")) + "</code></pre>";
       inCode = false;
       codeLang = "";
       codeLines = [];
     }
 
-    lines.forEach((rawLine) => {
-      const line = rawLine;
-      const trimmed = line.trim();
+    lines.forEach(function (raw) {
+      var trimmed = raw.trim();
 
       if (trimmed.startsWith("```")) {
-        flushParagraph();
-        flushList();
-        flushQuote();
-
-        if (inCode) {
-          flushCode();
-        } else {
-          inCode = true;
-          codeLang = trimmed.slice(3).trim();
-          codeLines = [];
-        }
-
+        flush();
+        if (inCode) { flushCode(); }
+        else { inCode = true; codeLang = trimmed.slice(3).trim(); codeLines = []; }
         return;
       }
+      if (inCode) { codeLines.push(raw); return; }
 
-      if (inCode) {
-        codeLines.push(line);
-        return;
-      }
-
-      if (!trimmed) {
-        flushParagraph();
-        flushList();
-        flushQuote();
-        return;
-      }
-
-      if (/^---+$/.test(trimmed)) {
-        flushParagraph();
-        flushList();
-        flushQuote();
-        html += "<hr>";
-        return;
-      }
+      if (!trimmed) { flush(); return; }
+      if (/^---+$/.test(trimmed)) { flush(); html += "<hr>"; return; }
 
       if (trimmed.startsWith(">")) {
-        flushParagraph();
-        flushList();
+        flushPara(); flushList();
         quoteLines.push(trimmed.replace(/^>\s?/, ""));
         return;
       }
 
-      const headingMatch = trimmed.match(/^(#{1,6})\s+(.*)$/);
-      if (headingMatch) {
-        flushParagraph();
-        flushList();
-        flushQuote();
-
-        let level = headingMatch[1].length;
-        const text = headingMatch[2].trim();
-
-        if (level === 1 && !firstH1Seen) {
-          firstH1Seen = true;
-          return;
-        }
-
-        if (level === 1) {
-          level = 2;
-        }
-
-        headingIndex += 1;
-        const id = "section-" + headingIndex;
-        html += "<h" + level + ' id="' + id + '">' + parseInline(text) + "</h" + level + ">";
+      var hm = trimmed.match(/^(#{1,6})\s+(.*)$/);
+      if (hm) {
+        flush();
+        var lvl = hm[1].length;
+        headingIdx++;
+        var id = "s-" + headingIdx;
+        html += "<h" + lvl + ' id="' + id + '">' + inline(hm[2].trim()) + "</h" + lvl + ">";
         return;
       }
 
-      const orderedMatch = trimmed.match(/^\d+\.\s+(.*)$/);
-      if (orderedMatch) {
-        flushParagraph();
-        flushQuote();
-
-        if (listType && listType !== "ol") {
-          flushList();
-        }
-
+      var ol = trimmed.match(/^\d+\.\s+(.*)$/);
+      if (ol) {
+        flushPara(); flushQuote();
+        if (listType && listType !== "ol") flushList();
         listType = "ol";
-        listItems.push(orderedMatch[1]);
+        listItems.push(ol[1]);
         return;
       }
 
-      const unorderedMatch = trimmed.match(/^[-*]\s+(.*)$/);
-      if (unorderedMatch) {
-        flushParagraph();
-        flushQuote();
-
-        if (listType && listType !== "ul") {
-          flushList();
-        }
-
+      var ul = trimmed.match(/^[-*]\s+(.*)$/);
+      if (ul) {
+        flushPara(); flushQuote();
+        if (listType && listType !== "ul") flushList();
         listType = "ul";
-        listItems.push(unorderedMatch[1]);
+        listItems.push(ul[1]);
         return;
       }
 
-      flushList();
-      flushQuote();
-      paragraphLines.push(line);
+      flushList(); flushQuote();
+      paraLines.push(raw);
     });
 
-    flushParagraph();
-    flushList();
-    flushQuote();
-    flushCode();
-
+    flush(); flushCode();
     return html;
   }
 
-  function parseInline(text) {
-    let html = escapeHtml(text);
-
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (_, label, url) {
-      return '<a href="' + sanitizeUrl(url) + '">' + escapeHtml(label) + "</a>";
+  function inline(t) {
+    var h = esc(t);
+    h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (_, label, url) {
+      return '<a href="' + url.replace(/"/g, "%22") + '">' + label + "</a>";
     });
-
-    html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
-    html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
-    html = html.replace(/\*([^*]+)\*/g, "<em>$1</em>");
-
-    return html;
+    h = h.replace(/`([^`]+)`/g, "<code>$1</code>");
+    h = h.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    h = h.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    return h;
   }
 
-  function sanitizeUrl(url) {
-    return url.replace(/"/g, "%22");
-  }
-
-  function escapeHtml(value) {
-    return value
+  function esc(v) {
+    return v
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  // --- TOC builder ---
+  function buildToc(root, mount) {
+    if (!mount) return;
+    var headings = Array.from(root.querySelectorAll("h1, h2, h3"));
+    if (!headings.length) return;
+
+    mount.innerHTML = headings.map(function (h) {
+      var level = h.tagName.replace("H", "");
+      return '<a href="#' + h.id + '" data-level="' + level + '">' + (h.textContent || "") + "</a>";
+    }).join("");
+  }
+
+  // --- TOC active tracking ---
+  function trackTocActive() {
+    var tocLinks = document.querySelectorAll("[data-markdown-toc] a");
+    if (!tocLinks.length) return;
+
+    var headings = [];
+    tocLinks.forEach(function (a) {
+      var id = a.getAttribute("href").slice(1);
+      var el = document.getElementById(id);
+      if (el) headings.push({ el: el, link: a });
+    });
+
+    function update() {
+      var scrollY = window.scrollY + 100;
+      var current = null;
+      headings.forEach(function (h) {
+        if (h.el.offsetTop <= scrollY) current = h;
+      });
+      tocLinks.forEach(function (a) { a.classList.remove("active"); });
+      if (current) current.link.classList.add("active");
+    }
+
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+  }
+
+  // --- Init markdown pages ---
+  var page = document.querySelector("[data-markdown-source]");
+  if (page) {
+    var source = page.getAttribute("data-markdown-source");
+    var content = document.querySelector("[data-markdown-content]");
+    var toc = document.querySelector("[data-markdown-toc]");
+    var status = document.querySelector("[data-markdown-status]");
+
+    if (source && content) {
+      fetch(source)
+        .then(function (r) {
+          if (!r.ok) throw new Error("Failed to load " + source);
+          return r.text();
+        })
+        .then(function (md) {
+          content.innerHTML = renderMarkdown(md);
+          if (status) status.remove();
+          buildToc(content, toc);
+          addCopyButtons();
+          trackTocActive();
+        })
+        .catch(function (err) {
+          if (status) status.textContent = err.message;
+        });
+    }
+  } else {
+    addCopyButtons();
   }
 })();

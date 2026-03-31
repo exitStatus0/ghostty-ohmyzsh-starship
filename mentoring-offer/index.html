@@ -3,111 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOpus | Mentoring Offer</title>
-    <meta
-      name="description"
-      content="DevOpus mentoring offer page for 1:1 DevOps, Platform Engineering, and SRE-focused sessions."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    >
+    <title>Mentoring Offer | Ghostty + Oh My Zsh + Starship</title>
+    <meta name="description" content="1:1 DevOps, Platform Engineering, and SRE mentoring sessions with a practical angle.">
     <link rel="stylesheet" href="../assets/site.css">
     <script src="../assets/site.js" defer></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="../">
-            <span class="brand__mark">D</span>
-            <span class="brand__copy">
-              <strong>DevOpus</strong>
-              <span>AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov</span>
-            </span>
-          </a>
-          <nav class="nav">
-            <a href="../">Home</a>
-            <a href="#offer">Offer</a>
-            <a href="../en/">English Guide</a>
-            <a href="../other/">Other Guide</a>
-          </nav>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../">
+          <span class="brand-icon">G</span>
+          <span>ghostty + ohmyzsh + starship</span>
+        </a>
+        <nav class="nav">
+          <a href="../">Home</a>
+          <a href="../en/">English Guide</a>
+          <a href="../other/">Other Guide</a>
+          <a href="./" class="active">Mentoring</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom:0">
+        <div class="container" style="text-align:left;max-width:var(--max-width)">
+          <div class="hero-badge">Mentoring Offer</div>
+          <h1 style="max-width:none;text-align:left">1:1 DevOps / Platform Engineering Sessions</h1>
+          <p class="hero-lead" style="max-width:none;text-align:left;margin-bottom:0">
+            Grow faster in DevOps / Platform / SRE. Interview prep, roadmap planning, real technical problems.
+          </p>
         </div>
-      </header>
+      </section>
 
-      <main class="main">
-        <section class="page-hero" id="offer">
-          <div class="page-hero__grid">
-            <article class="panel panel--page reveal">
-              <span class="panel__flare panel__flare--warm"></span>
-              <span class="panel__flare panel__flare--cool"></span>
-              <span class="eyebrow">Mentoring offer</span>
-              <h1 class="page-title">1:1 DevOps / Platform Engineering sessions with a practical angle.</h1>
-              <p class="page-lead">
-                This page reflects the mentoring file directly: growth roadmap, interview prep, Kubernetes,
-                AWS, CI/CD, Terraform, Linux, and help with real technical blockers.
-              </p>
-              <div class="button-row">
-                <a class="button button--primary" href="#details">Read offer details</a>
-                <a class="button button--secondary" href="../en/">Open English Guide</a>
-                <a class="button button--ghost" href="../other/">Open Other Guide</a>
-              </div>
-            </article>
-
-            <aside class="panel panel--page reveal">
-              <div class="pricing-grid">
-                <article class="price-card">
-                  <h3>30 min</h3>
-                  <div class="price">EUR 59</div>
-                  <p>Focused problem or short technical / career discussion.</p>
-                </article>
-                <article class="price-card">
-                  <h3>60 min</h3>
-                  <div class="price">EUR 109</div>
-                  <p>Full technical or career-focused consultation.</p>
-                </article>
-                <article class="price-card">
-                  <h3>90 min</h3>
-                  <div class="price">EUR 159</div>
-                  <p>Deep dive, mock interview, roadmap planning, or complex technical work.</p>
-                </article>
-                <article class="price-card">
-                  <h3>Growth plan</h3>
-                  <div class="price">from EUR 249</div>
-                  <p>Personalized roadmap and structured next steps.</p>
-                </article>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section class="guide-layout" id="details">
+      <div class="container">
+        <div class="guide-layout">
           <aside class="guide-sidebar">
-            <div class="panel panel--sidebar reveal">
-              <span class="section-label">Offer map</span>
-              <h2 class="sidebar-title">Sections</h2>
-              <nav class="toc" data-markdown-toc></nav>
-            </div>
-            <div class="panel panel--sidebar reveal">
-              <span class="section-label">Included</span>
-              <ul class="summary-list">
-                <li>Short preparation before the session</li>
-                <li>1:1 call focused on a real outcome</li>
-                <li>Recommendations and next steps after the call</li>
-              </ul>
-            </div>
+            <div class="toc-title">On this page</div>
+            <nav class="toc" data-markdown-toc></nav>
           </aside>
-
           <article class="guide-main">
-            <div class="markdown-frame reveal">
-              <div class="markdown-status" data-markdown-status>Loading offer content…</div>
-              <div class="prose" data-markdown-content></div>
-            </div>
+            <div class="loading-msg" data-markdown-status>Loading offer details...</div>
+            <div class="prose" data-markdown-content></div>
           </article>
-        </section>
-      </main>
-    </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>DevOpus | Yaroslav Kostiannikov</span>
+        <a href="./">Mentoring Offer</a>
+      </div>
+    </footer>
   </body>
 </html>

@@ -3,109 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOpus | English Guide</title>
-    <meta
-      name="description"
-      content="English guide page for the Ghostty, Oh My Zsh, and Starship setup, rendered from the source markdown."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    >
+    <title>English Guide | Ghostty + Oh My Zsh + Starship</title>
+    <meta name="description" content="Practical English guide for building a Ghostty, Oh My Zsh, and Starship terminal setup.">
     <link rel="stylesheet" href="../assets/site.css">
     <script src="../assets/site.js" defer></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="../">
-            <span class="brand__mark">D</span>
-            <span class="brand__copy">
-              <strong>DevOpus</strong>
-              <span>AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov</span>
-            </span>
-          </a>
-          <nav class="nav">
-            <a href="../">Home</a>
-            <a href="#guide">Guide</a>
-            <a href="../other/">Other</a>
-            <a href="../mentoring-offer/">Offer</a>
-          </nav>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="../">
+          <span class="brand-icon">G</span>
+          <span>ghostty + ohmyzsh + starship</span>
+        </a>
+        <nav class="nav">
+          <a href="../">Home</a>
+          <a href="./" class="active">English Guide</a>
+          <a href="../other/">Other Guide</a>
+          <a href="../mentoring-offer/">Mentoring</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" style="padding-bottom:0">
+        <div class="container" style="text-align:left;max-width:var(--max-width)">
+          <div class="hero-badge">English Guide</div>
+          <h1 style="max-width:none;text-align:left">Ghostty + Oh My Zsh + Starship for DevOps and Software Development</h1>
+          <p class="hero-lead" style="max-width:none;text-align:left;margin-bottom:0">
+            A practical mini-course for building a fast, clean, and productive terminal setup.
+          </p>
         </div>
-      </header>
+      </section>
 
-      <main class="main">
-        <section class="page-hero">
-          <div class="page-hero__grid">
-            <article class="panel panel--page reveal">
-              <span class="panel__flare panel__flare--warm"></span>
-              <span class="panel__flare panel__flare--cool"></span>
-              <span class="eyebrow">English guide</span>
-              <h1 class="page-title">Ghostty + Oh My Zsh + Starship for DevOps and Software Development</h1>
-              <p class="page-lead">
-                A practical mini-course for building a fast, clean, and productive terminal setup. This page
-                renders the guide directly from the source markdown file so the content stays tied to the repository.
-              </p>
-              <div class="button-row">
-                <a class="button button--primary" href="#guide">Read the guide</a>
-                <a class="button button--secondary" href="../mentoring-offer/">Open mentoring offer</a>
-                <a class="button button--ghost" href="../other/">Open Other version</a>
-              </div>
-            </article>
-
-            <aside class="panel panel--page reveal">
-              <div class="summary-grid">
-                <article class="summary-card">
-                  <h3>Who it is for</h3>
-                  <p>People who spend a lot of time in the terminal and want a setup that stays fast and useful.</p>
-                </article>
-                <article class="summary-card">
-                  <h3>You will build</h3>
-                  <p>Ghostty, Zsh, Oh My Zsh, Starship, plugin selection, CLI tooling, aliases, and a clean config.</p>
-                </article>
-                <article class="summary-card">
-                  <h3>Course shape</h3>
-                  <p>Install, configure, extend, validate, and troubleshoot across a practical 10-step structure.</p>
-                </article>
-              </div>
-              <div class="chip-row">
-                <span class="chip">Terminal UX</span>
-                <span class="chip">Prompt design</span>
-                <span class="chip">Plugins</span>
-                <span class="chip">DevOps workflow</span>
-              </div>
-            </aside>
-          </div>
-        </section>
-
-        <section class="guide-layout" id="guide">
+      <div class="container">
+        <div class="guide-layout">
           <aside class="guide-sidebar">
-            <div class="panel panel--sidebar reveal">
-              <span class="section-label">Contents</span>
-              <h2 class="sidebar-title">Guide map</h2>
-              <nav class="toc" data-markdown-toc></nav>
-            </div>
-            <div class="panel panel--sidebar reveal">
-              <span class="section-label">Quick view</span>
-              <ul class="summary-list">
-                <li>Practical guidance instead of plugin maximalism</li>
-                <li>Balanced setup for speed, clarity, and maintainability</li>
-                <li>Readable page that follows the source file structure</li>
-              </ul>
-            </div>
+            <div class="toc-title">On this page</div>
+            <nav class="toc" data-markdown-toc></nav>
           </aside>
-
           <article class="guide-main">
-            <div class="markdown-frame reveal">
-              <div class="markdown-status" data-markdown-status>Loading guide content…</div>
-              <div class="prose" data-markdown-content></div>
-            </div>
+            <div class="loading-msg" data-markdown-status>Loading guide...</div>
+            <div class="prose" data-markdown-content></div>
           </article>
-        </section>
-      </main>
-    </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>DevOpus | Yaroslav Kostiannikov</span>
+        <a href="../mentoring-offer/">Mentoring Offer</a>
+      </div>
+    </footer>
   </body>
 </html>
