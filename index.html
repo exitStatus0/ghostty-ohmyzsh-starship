@@ -1,294 +1,390 @@
 <!doctype html>
 <html lang="en" data-lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghostty + Oh My Zsh + Starship</title>
-    <meta
-      name="description"
-      content="A GitHub Pages landing site for a modern Ghostty, Zsh, Oh My Zsh, and Starship terminal workflow with an AI-assisted setup angle."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="assets/site.css">
-    <script src="assets/site.js" defer></script>
-  </head>
-  <body>
-    <div class="site-shell page">
-      <header class="site-header">
-        <div class="site-header__inner">
-          <a class="brand" href="./">
-            <span class="brand__mark">M</span>
-            <span>Mentor Yarick</span>
-          </a>
-          <nav class="nav">
-            <a href="#guides">Guides</a>
-            <a href="#ai">AI</a>
-            <a href="#mentoring">Mentoring</a>
-            <a href="./en/">EN Page</a>
-            <a href="./other/">RU Page</a>
-          </nav>
-          <div class="lang-switch" aria-label="Language switch">
-            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-            <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ghostty + Oh My Zsh + Starship</title>
+        <meta
+            name="description"
+            content="A GitHub Pages landing site for a modern Ghostty, Zsh, Oh My Zsh, and Starship terminal workflow with an AI-assisted setup angle."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/site.css" />
+        <script src="assets/site.js" defer></script>
+    </head>
+    <body>
+        <div class="site-shell page">
+            <header class="site-header">
+                <div class="site-header__inner">
+                    <a class="brand" href="./">
+                        <span class="brand__mark">M</span>
+                        <span>Mentor Yarick</span>
+                    </a>
+                    <nav class="nav">
+                        <a href="#guides">Guides</a>
+                        <a href="#ai">AI</a>
+                        <a href="#mentoring">Mentoring</a>
+                        <a href="./en/">EN Page</a>
+                        <a href="./other/">Other Page</a>
+                    </nav>
+                    <div class="lang-switch" aria-label="Language switch">
+                        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" data-set-lang="ru" aria-pressed="false">OTHER</button>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <section class="hero">
+                    <article class="panel panel--hero reveal">
+                        <span class="panel__glow panel__glow--orange"></span>
+                        <span class="panel__glow panel__glow--teal"></span>
+
+                        <div class="lang-en">
+                            <span class="eyebrow">GitHub Pages-ready terminal landing page</span>
+                            <h1>
+                                Make the repo feel like a polished product, not just a folder of
+                                notes.
+                            </h1>
+                            <p class="lead">
+                                This site turns the project into a presentation layer for your
+                                YouTube content, your setup guide, and your DevOps positioning. It
+                                presents the stack, explains the value, connects the AI angle, and
+                                gives the mentoring offer a real place inside the repo.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="button button--primary" href="./en/"
+                                    >Open English Guide</a
+                                >
+                                <a class="button button--secondary" href="./other/"
+                                    >Open Other Guide</a
+                                >
+                                <a class="button button--ghost" href="./mentring-offer/"
+                                    >See Mentoring Offer</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="lang-ru">
+                            <span class="eyebrow">GitHub Pages-сайт для терминального проекта</span>
+                            <h1>
+                                Сделайте репозиторий похожим на продукт, а не просто на папку с
+                                заметками.
+                            </h1>
+                            <p class="lead">
+                                Этот сайт превращает проект в презентационную площадку для
+                                YouTube-контента, гайда по сетапу и вашего DevOps-позиционирования.
+                                Он показывает стек, объясняет ценность, добавляет AI-угол и даёт
+                                mentoring-offer полноценное место внутри репозитория.
+                            </p>
+                            <div class="hero-actions">
+                                <a class="button button--primary" href="./en/"
+                                    >Открыть English Guide</a
+                                >
+                                <a class="button button--secondary" href="./other/"
+                                    >Открыть Other Guide</a
+                                >
+                                <a class="button button--ghost" href="./mentring-offer/"
+                                    >Открыть Mentoring Offer</a
+                                >
+                            </div>
+                        </div>
+
+                        <div class="metrics">
+                            <div class="metric">
+                                <strong>3</strong>
+                                <span class="lang-en"
+                                    >Public-facing pages: home, guides, mentoring.</span
+                                >
+                                <span class="lang-ru"
+                                    >Публичные страницы: главная, гайды, mentoring.</span
+                                >
+                            </div>
+                            <div class="metric">
+                                <strong>2</strong>
+                                <span class="lang-en"
+                                    >Languages presented directly from the same site.</span
+                                >
+                                <span class="lang-ru">Два языка прямо внутри одного сайта.</span>
+                            </div>
+                            <div class="metric">
+                                <strong>1</strong>
+                                <span class="lang-en"
+                                    >Clear DevOps positioning instead of generic docs.</span
+                                >
+                                <span class="lang-ru"
+                                    >Одно ясное DevOps-позиционирование вместо обычной
+                                    документации.</span
+                                >
+                            </div>
+                        </div>
+                    </article>
+
+                    <aside class="terminal-card reveal">
+                        <div class="terminal-window">
+                            <div class="terminal-window__bar">
+                                <span class="terminal-window__dot terminal-window__dot--red"></span>
+                                <span
+                                    class="terminal-window__dot terminal-window__dot--yellow"
+                                ></span>
+                                <span
+                                    class="terminal-window__dot terminal-window__dot--green"
+                                ></span>
+                            </div>
+                            <div class="terminal-window__body">
+                                <div class="terminal-line">$ brew install ghostty zsh starship</div>
+                                <div class="terminal-line terminal-line--accent">
+                                    $ ai refine --focus "speed + clarity"
+                                </div>
+                                <div class="terminal-line">$ open guide --lang en</div>
+                                <div class="terminal-line">$ open guide --lang other</div>
+                                <div class="terminal-line">$ launch mentoring-offer</div>
+                                <div class="terminal-line terminal-line--muted">
+                                    status: clean terminal, clear message, ready to publish
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quote-card">
+                            <blockquote class="lang-en">
+                                Your terminal is not just where commands run. It is where technical
+                                confidence becomes visible.
+                            </blockquote>
+                            <blockquote class="lang-ru">
+                                Терминал — это не просто место, где выполняются команды. Это место,
+                                где становится видна техническая уверенность.
+                            </blockquote>
+                            <cite class="lang-en">Suggested positioning for the video intro</cite>
+                            <cite class="lang-ru">Подходящий тезис для вступления к видео</cite>
+                        </div>
+                    </aside>
+                </section>
+
+                <section class="section" id="guides">
+                    <div class="section-heading reveal">
+                        <h2 class="lang-en">Built to guide, not just decorate.</h2>
+                        <h2 class="lang-ru">
+                            Сделано не только для красоты, но и для понятного ведения по теме.
+                        </h2>
+                        <p class="lang-en">
+                            The site gives the repo a front door. Visitors understand what the stack
+                            is, why it matters, and where to go next depending on language and
+                            intent.
+                        </p>
+                        <p class="lang-ru">
+                            Сайт даёт репозиторию нормальный вход. Посетитель понимает, что это за
+                            стек, зачем он нужен и куда идти дальше в зависимости от языка и цели.
+                        </p>
+                    </div>
+
+                    <div class="card-grid">
+                        <article class="card card--4 reveal">
+                            <h3 class="lang-en">English guide</h3>
+                            <h3 class="lang-ru">English guide</h3>
+                            <p class="lang-en">
+                                A cleaner landing page for the main setup story: Ghostty, Zsh, Oh My
+                                Zsh, Starship, plugins, and the daily workflow angle.
+                            </p>
+                            <p class="lang-ru">
+                                Более чистая страница для основного сюжета сетапа: Ghostty, Zsh, Oh
+                                My Zsh, Starship, плагины и ежедневный workflow.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./en/">Open /en/</a>
+                            </div>
+                        </article>
+
+                        <article class="card card--4 reveal">
+                            <h3 class="lang-en">Other guide</h3>
+                            <h3 class="lang-ru">Other guide</h3>
+                            <p class="lang-en">
+                                An Other-language page for the same idea, keeping the project
+                                accessible for a broader audience.
+                            </p>
+                            <p class="lang-ru">
+                                Страница в разделе Other для той же идеи, чтобы проект был доступнее
+                                более широкой аудитории.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./other/">Open /other/</a>
+                            </div>
+                        </article>
+
+                        <article class="card card--4 reveal">
+                            <h3 class="lang-en">Mentoring offer</h3>
+                            <h3 class="lang-ru">Mentoring offer</h3>
+                            <p class="lang-en">
+                                The mentoring page is not floating somewhere else. It is part of the
+                                site, connected to the educational content and your personal offer.
+                            </p>
+                            <p class="lang-ru">
+                                Страница mentoring не висит отдельно где-то сбоку. Она встроена в
+                                сайт и связана и с обучающим контентом, и с вашим личным
+                                предложением.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--secondary" href="./mentring-offer/"
+                                    >Open /mentring-offer/</a
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="ai">
+                    <div class="section-heading reveal">
+                        <h2 class="lang-en">How AI fits the story</h2>
+                        <h2 class="lang-ru">Как сюда органично входит AI</h2>
+                        <p class="lang-en">
+                            AI should not be presented as magic. In this context, it is a practical
+                            accelerator for deciding, refining, documenting, and troubleshooting a
+                            terminal setup that actually matches the user.
+                        </p>
+                        <p class="lang-ru">
+                            AI не стоит подавать как магию. В этом контексте это практический
+                            ускоритель для выбора, доработки, документирования и диагностики
+                            терминального сетапа, который реально подходит человеку.
+                        </p>
+                    </div>
+
+                    <div class="steps">
+                        <article class="step reveal">
+                            <div class="step__number">1</div>
+                            <h3 class="lang-en">Choose the right stack</h3>
+                            <h3 class="lang-ru">Подобрать правильный стек</h3>
+                            <p class="lang-en">
+                                AI helps avoid random plugin collections and focuses on
+                                role-specific tooling.
+                            </p>
+                            <p class="lang-ru">
+                                AI помогает не собирать случайную коллекцию плагинов, а выбирать
+                                инструменты под роль.
+                            </p>
+                        </article>
+                        <article class="step reveal">
+                            <div class="step__number">2</div>
+                            <h3 class="lang-en">Draft the config</h3>
+                            <h3 class="lang-ru">Собрать первый черновик</h3>
+                            <p class="lang-en">
+                                It can generate starter versions of `.zshrc`, `starship.toml`,
+                                aliases, and prompt layout.
+                            </p>
+                            <p class="lang-ru">
+                                Он может сгенерировать первую версию `.zshrc`, `starship.toml`,
+                                алиасов и prompt-layout.
+                            </p>
+                        </article>
+                        <article class="step reveal">
+                            <div class="step__number">3</div>
+                            <h3 class="lang-en">Remove friction</h3>
+                            <h3 class="lang-ru">Убрать лишнее трение</h3>
+                            <p class="lang-en">
+                                AI is useful for startup profiling, prompt cleanup, font issues, and
+                                plugin conflicts.
+                            </p>
+                            <p class="lang-ru">
+                                AI полезен для анализа медленного старта, чистки prompt, проблем со
+                                шрифтами и конфликтов плагинов.
+                            </p>
+                        </article>
+                        <article class="step reveal">
+                            <div class="step__number">4</div>
+                            <h3 class="lang-en">Turn it into content</h3>
+                            <h3 class="lang-ru">Превратить это в контент</h3>
+                            <p class="lang-en">
+                                A personal setup becomes a guide, a video, a lead magnet, or a
+                                mentoring entry point.
+                            </p>
+                            <p class="lang-ru">
+                                Личный сетап превращается в гайд, видео, лид-магнит или входную
+                                точку в mentoring.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="mentoring">
+                    <div class="section-heading reveal">
+                        <h2 class="lang-en">
+                            The site now includes the mentoring offer as a real destination.
+                        </h2>
+                        <h2 class="lang-ru">
+                            Сайт теперь включает mentoring-offer как полноценную страницу, а не
+                            просто ссылку.
+                        </h2>
+                        <p class="lang-en">
+                            This is where the technical authority of the setup connects to a
+                            commercial next step. The repo becomes useful both for viewers and for
+                            potential clients.
+                        </p>
+                        <p class="lang-ru">
+                            Здесь техническая экспертность сетапа соединяется с коммерческим
+                            следующим шагом. Репозиторий становится полезным и зрителям, и
+                            потенциальным клиентам.
+                        </p>
+                    </div>
+
+                    <div class="card-grid">
+                        <article class="card card--6 reveal">
+                            <h3 class="lang-en">Offer preview</h3>
+                            <h3 class="lang-ru">Превью предложения</h3>
+                            <div class="pill-row">
+                                <span class="pill">30 min / EUR 59</span>
+                                <span class="pill">60 min / EUR 109</span>
+                                <span class="pill">90 min / EUR 159</span>
+                            </div>
+                            <p class="muted" style="margin-top: 16px">
+                                <span class="lang-en"
+                                    >Includes roadmap work, interview prep, DevOps troubleshooting,
+                                    and growth strategy.</span
+                                >
+                                <span class="lang-ru"
+                                    >Включает roadmap, подготовку к интервью, разбор DevOps-задач и
+                                    стратегию роста.</span
+                                >
+                            </p>
+                        </article>
+                        <article class="card card--6 reveal">
+                            <h3 class="lang-en">Why it matters on the homepage</h3>
+                            <h3 class="lang-ru">Почему это важно прямо на главной</h3>
+                            <p class="lang-en">
+                                Visitors should not need to guess whether there is a deeper way to
+                                work with you. The site now makes that path visible while keeping
+                                the educational value first.
+                            </p>
+                            <p class="lang-ru">
+                                Посетитель не должен догадываться, можно ли с вами работать глубже.
+                                Теперь этот путь виден сразу, при этом образовательная ценность
+                                остаётся на первом месте.
+                            </p>
+                            <div class="button-row">
+                                <a class="button button--primary" href="./mentring-offer/"
+                                    >Go to Mentoring Page</a
+                                >
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="site-footer">
+                <div class="site-footer__inner">
+                    <span class="lang-en"
+                        >Static site from the repo root. Publish with GitHub Pages from the main
+                        branch.</span
+                    >
+                    <span class="lang-ru"
+                        >Статический сайт из корня репозитория. Публикуется через GitHub Pages из
+                        основной ветки.</span
+                    >
+                    <a href="./README.md">README</a>
+                </div>
+            </footer>
         </div>
-      </header>
-
-      <main>
-        <section class="hero">
-          <article class="panel panel--hero reveal">
-            <span class="panel__glow panel__glow--orange"></span>
-            <span class="panel__glow panel__glow--teal"></span>
-
-            <div class="lang-en">
-              <span class="eyebrow">GitHub Pages-ready terminal landing page</span>
-              <h1>Make the repo feel like a polished product, not just a folder of notes.</h1>
-              <p class="lead">
-                This site turns the project into a presentation layer for your YouTube content, your setup guide,
-                and your DevOps positioning. It presents the stack, explains the value, connects the AI angle, and
-                gives the mentoring offer a real place inside the repo.
-              </p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./en/">Open English Guide</a>
-                <a class="button button--secondary" href="./other/">Open Russian Guide</a>
-                <a class="button button--ghost" href="./mentring-offer/">See Mentoring Offer</a>
-              </div>
-            </div>
-
-            <div class="lang-ru">
-              <span class="eyebrow">GitHub Pages-сайт для терминального проекта</span>
-              <h1>Сделайте репозиторий похожим на продукт, а не просто на папку с заметками.</h1>
-              <p class="lead">
-                Этот сайт превращает проект в презентационную площадку для YouTube-контента, гайда по сетапу и
-                вашего DevOps-позиционирования. Он показывает стек, объясняет ценность, добавляет AI-угол и даёт
-                mentoring-offer полноценное место внутри репозитория.
-              </p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./en/">Открыть English Guide</a>
-                <a class="button button--secondary" href="./other/">Открыть Russian Guide</a>
-                <a class="button button--ghost" href="./mentring-offer/">Открыть Mentoring Offer</a>
-              </div>
-            </div>
-
-            <div class="metrics">
-              <div class="metric">
-                <strong>3</strong>
-                <span class="lang-en">Public-facing pages: home, guides, mentoring.</span>
-                <span class="lang-ru">Публичные страницы: главная, гайды, mentoring.</span>
-              </div>
-              <div class="metric">
-                <strong>2</strong>
-                <span class="lang-en">Languages presented directly from the same site.</span>
-                <span class="lang-ru">Два языка прямо внутри одного сайта.</span>
-              </div>
-              <div class="metric">
-                <strong>1</strong>
-                <span class="lang-en">Clear DevOps positioning instead of generic docs.</span>
-                <span class="lang-ru">Одно ясное DevOps-позиционирование вместо обычной документации.</span>
-              </div>
-            </div>
-          </article>
-
-          <aside class="terminal-card reveal">
-            <div class="terminal-window">
-              <div class="terminal-window__bar">
-                <span class="terminal-window__dot terminal-window__dot--red"></span>
-                <span class="terminal-window__dot terminal-window__dot--yellow"></span>
-                <span class="terminal-window__dot terminal-window__dot--green"></span>
-              </div>
-              <div class="terminal-window__body">
-                <div class="terminal-line">$ brew install ghostty zsh starship</div>
-                <div class="terminal-line terminal-line--accent">$ ai refine --focus "speed + clarity"</div>
-                <div class="terminal-line">$ open guide --lang en</div>
-                <div class="terminal-line">$ open guide --lang ru</div>
-                <div class="terminal-line">$ launch mentoring-offer</div>
-                <div class="terminal-line terminal-line--muted">status: clean terminal, clear message, ready to publish</div>
-              </div>
-            </div>
-
-            <div class="quote-card">
-              <blockquote class="lang-en">
-                Your terminal is not just where commands run. It is where technical confidence becomes visible.
-              </blockquote>
-              <blockquote class="lang-ru">
-                Терминал — это не просто место, где выполняются команды. Это место, где становится видна техническая уверенность.
-              </blockquote>
-              <cite class="lang-en">Suggested positioning for the video intro</cite>
-              <cite class="lang-ru">Подходящий тезис для вступления к видео</cite>
-            </div>
-          </aside>
-        </section>
-
-        <section class="section" id="guides">
-          <div class="section-heading reveal">
-            <h2 class="lang-en">Built to guide, not just decorate.</h2>
-            <h2 class="lang-ru">Сделано не только для красоты, но и для понятного ведения по теме.</h2>
-            <p class="lang-en">
-              The site gives the repo a front door. Visitors understand what the stack is, why it matters, and
-              where to go next depending on language and intent.
-            </p>
-            <p class="lang-ru">
-              Сайт даёт репозиторию нормальный вход. Посетитель понимает, что это за стек, зачем он нужен и куда
-              идти дальше в зависимости от языка и цели.
-            </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card card--4 reveal">
-              <h3 class="lang-en">English guide</h3>
-              <h3 class="lang-ru">English guide</h3>
-              <p class="lang-en">
-                A cleaner landing page for the main setup story: Ghostty, Zsh, Oh My Zsh, Starship, plugins, and
-                the daily workflow angle.
-              </p>
-              <p class="lang-ru">
-                Более чистая страница для основного сюжета сетапа: Ghostty, Zsh, Oh My Zsh, Starship, плагины и
-                ежедневный workflow.
-              </p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./en/">Open /en/</a>
-              </div>
-            </article>
-
-            <article class="card card--4 reveal">
-              <h3 class="lang-en">Russian guide</h3>
-              <h3 class="lang-ru">Russian guide</h3>
-              <p class="lang-en">
-                A Russian-facing page for the same idea, keeping the project accessible for the audience that
-                prefers local-language learning material.
-              </p>
-              <p class="lang-ru">
-                Русскоязычная страница для той же идеи, чтобы проект был удобен аудитории, которой комфортнее
-                учиться на русском языке.
-              </p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./other/">Open /other/</a>
-              </div>
-            </article>
-
-            <article class="card card--4 reveal">
-              <h3 class="lang-en">Mentoring offer</h3>
-              <h3 class="lang-ru">Mentoring offer</h3>
-              <p class="lang-en">
-                The mentoring page is not floating somewhere else. It is part of the site, connected to the
-                educational content and your personal offer.
-              </p>
-              <p class="lang-ru">
-                Страница mentoring не висит отдельно где-то сбоку. Она встроена в сайт и связана и с обучающим
-                контентом, и с вашим личным предложением.
-              </p>
-              <div class="button-row">
-                <a class="button button--secondary" href="./mentring-offer/">Open /mentring-offer/</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="ai">
-          <div class="section-heading reveal">
-            <h2 class="lang-en">How AI fits the story</h2>
-            <h2 class="lang-ru">Как сюда органично входит AI</h2>
-            <p class="lang-en">
-              AI should not be presented as magic. In this context, it is a practical accelerator for deciding,
-              refining, documenting, and troubleshooting a terminal setup that actually matches the user.
-            </p>
-            <p class="lang-ru">
-              AI не стоит подавать как магию. В этом контексте это практический ускоритель для выбора,
-              доработки, документирования и диагностики терминального сетапа, который реально подходит человеку.
-            </p>
-          </div>
-
-          <div class="steps">
-            <article class="step reveal">
-              <div class="step__number">1</div>
-              <h3 class="lang-en">Choose the right stack</h3>
-              <h3 class="lang-ru">Подобрать правильный стек</h3>
-              <p class="lang-en">AI helps avoid random plugin collections and focuses on role-specific tooling.</p>
-              <p class="lang-ru">AI помогает не собирать случайную коллекцию плагинов, а выбирать инструменты под роль.</p>
-            </article>
-            <article class="step reveal">
-              <div class="step__number">2</div>
-              <h3 class="lang-en">Draft the config</h3>
-              <h3 class="lang-ru">Собрать первый черновик</h3>
-              <p class="lang-en">It can generate starter versions of `.zshrc`, `starship.toml`, aliases, and prompt layout.</p>
-              <p class="lang-ru">Он может сгенерировать первую версию `.zshrc`, `starship.toml`, алиасов и prompt-layout.</p>
-            </article>
-            <article class="step reveal">
-              <div class="step__number">3</div>
-              <h3 class="lang-en">Remove friction</h3>
-              <h3 class="lang-ru">Убрать лишнее трение</h3>
-              <p class="lang-en">AI is useful for startup profiling, prompt cleanup, font issues, and plugin conflicts.</p>
-              <p class="lang-ru">AI полезен для анализа медленного старта, чистки prompt, проблем со шрифтами и конфликтов плагинов.</p>
-            </article>
-            <article class="step reveal">
-              <div class="step__number">4</div>
-              <h3 class="lang-en">Turn it into content</h3>
-              <h3 class="lang-ru">Превратить это в контент</h3>
-              <p class="lang-en">A personal setup becomes a guide, a video, a lead magnet, or a mentoring entry point.</p>
-              <p class="lang-ru">Личный сетап превращается в гайд, видео, лид-магнит или входную точку в mentoring.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="mentoring">
-          <div class="section-heading reveal">
-            <h2 class="lang-en">The site now includes the mentoring offer as a real destination.</h2>
-            <h2 class="lang-ru">Сайт теперь включает mentoring-offer как полноценную страницу, а не просто ссылку.</h2>
-            <p class="lang-en">
-              This is where the technical authority of the setup connects to a commercial next step. The repo
-              becomes useful both for viewers and for potential clients.
-            </p>
-            <p class="lang-ru">
-              Здесь техническая экспертность сетапа соединяется с коммерческим следующим шагом. Репозиторий
-              становится полезным и зрителям, и потенциальным клиентам.
-            </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card card--6 reveal">
-              <h3 class="lang-en">Offer preview</h3>
-              <h3 class="lang-ru">Превью предложения</h3>
-              <div class="pill-row">
-                <span class="pill">30 min / EUR 59</span>
-                <span class="pill">60 min / EUR 109</span>
-                <span class="pill">90 min / EUR 159</span>
-              </div>
-              <p class="muted" style="margin-top: 16px;">
-                <span class="lang-en">Includes roadmap work, interview prep, DevOps troubleshooting, and growth strategy.</span>
-                <span class="lang-ru">Включает roadmap, подготовку к интервью, разбор DevOps-задач и стратегию роста.</span>
-              </p>
-            </article>
-            <article class="card card--6 reveal">
-              <h3 class="lang-en">Why it matters on the homepage</h3>
-              <h3 class="lang-ru">Почему это важно прямо на главной</h3>
-              <p class="lang-en">
-                Visitors should not need to guess whether there is a deeper way to work with you. The site now makes
-                that path visible while keeping the educational value first.
-              </p>
-              <p class="lang-ru">
-                Посетитель не должен догадываться, можно ли с вами работать глубже. Теперь этот путь виден сразу,
-                при этом образовательная ценность остаётся на первом месте.
-              </p>
-              <div class="button-row">
-                <a class="button button--primary" href="./mentring-offer/">Go to Mentoring Page</a>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="site-footer__inner">
-          <span class="lang-en">Static site from the repo root. Publish with GitHub Pages from the main branch.</span>
-          <span class="lang-ru">Статический сайт из корня репозитория. Публикуется через GitHub Pages из основной ветки.</span>
-          <a href="./README.md">README</a>
-        </div>
-      </footer>
-    </div>
-  </body>
+    </body>
 </html>

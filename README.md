@@ -1,6 +1,6 @@
 # Ghostty + Oh My Zsh + Starship
 
-[English](#english) | [Русский](#russian)
+[English](#english) | [Other](#other)
 
 ## English
 
@@ -65,7 +65,7 @@ In other words, AI helps move faster from "I want a better terminal" to "I have 
 ### Project structure
 
 - Detailed setup guide in English: [en/ghostty-ohmyzsh-starship-dev-setup.md](en/ghostty-ohmyzsh-starship-dev-setup.md)
-- Detailed setup guide in Russian: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
+- Detailed setup guide in the Other section: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
 - License: [LICENSE](LICENSE)
 
 ### Suggested intro for a YouTube video
@@ -76,7 +76,7 @@ If you want a short positioning text for a video intro, this project can be pres
 
 ---
 
-## Russian
+## Other
 
 Соберите терминал, который выглядит современно, работает быстро и действительно помогает работать эффективнее.
 
@@ -139,7 +139,7 @@ AI может помочь:
 ### Структура проекта
 
 - Подробный гайд на английском: [en/ghostty-ohmyzsh-starship-dev-setup.md](en/ghostty-ohmyzsh-starship-dev-setup.md)
-- Подробный гайд на русском: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
+- Подробный гайд в разделе Other: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
 - Лицензия: [LICENSE](LICENSE)
 
 ### Возможный текст для вступления к YouTube-видео
