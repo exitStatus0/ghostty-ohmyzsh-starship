@@ -1,231 +1,111 @@
 <!doctype html>
-<html lang="ru" data-lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>DevOpus | Other Guide</title>
-        <meta
-            name="description"
-            content="Страница раздела Other проекта DevOpus для терминального сетапа на базе Ghostty, Zsh, Oh My Zsh и Starship."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="../assets/site.css" />
-        <script src="../assets/site.js" defer></script>
-    </head>
-    <body>
-        <div class="site-shell page">
-            <header class="site-header">
-                <div class="site-header__inner">
-                    <a class="brand" href="../">
-                        <span class="brand__mark">D</span>
-                        <span>DevOpus</span>
-                    </a>
-                    <nav class="nav">
-                        <a href="../">Главная</a>
-                        <a href="../readme/">README</a>
-                        <a href="#modules">Модули</a>
-                        <a href="../mentoring-offer/">Mentoring</a>
-                    </nav>
-                    <div class="lang-switch" aria-label="Language switch">
-                        <a href="../en/">EN</a>
-                        <a class="is-active" href="./" aria-current="page">OTHER</a>
-                    </div>
-                </div>
-            </header>
-
-            <main>
-                <section class="page-hero">
-                    <div class="page-hero__grid">
-                        <article class="panel panel--hero reveal">
-                            <span class="panel__glow panel__glow--orange"></span>
-                            <span class="panel__glow panel__glow--teal"></span>
-                            <span class="eyebrow">DevOpus Other block</span>
-                            <h1>Ghostty + Oh My Zsh + Starship для DevOps и разработки ПО</h1>
-                            <p>
-                                Это блок Other внутри проекта. Используйте его для подробного guide
-                                после общего обзора в README.
-                            </p>
-                            <div class="pill-row">
-                                <span class="pill">Ghostty</span>
-                                <span class="pill">Zsh</span>
-                                <span class="pill">Oh My Zsh</span>
-                                <span class="pill">Starship</span>
-                                <span class="pill">DevOps workflow</span>
-                            </div>
-                            <div class="button-row">
-                                <a
-                                    class="button button--primary"
-                                    href="ghostty-ohmyzsh-starship-dev-setup-other.md"
-                                    >Открыть Markdown Source</a
-                                >
-                                <a class="button button--secondary" href="../mentoring-offer/"
-                                    >Mentoring Offer</a
-                                >
-                            </div>
-                        </article>
-
-                        <aside class="code-panel panel reveal">
-                            <h3>Стартовая установка</h3>
-                            <pre><code>brew install ghostty zsh starship \
-  zoxide fzf eza bat fd ripgrep jq yq direnv \
-  kubectl kubectx k9s terraform lazygit</code></pre>
-                        </aside>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <div class="section-heading reveal">
-                        <h2>Почему этот стек работает</h2>
-                        <p>
-                            Проект специально не пытается быть максималистским dump из dotfiles. Это
-                            сбалансированный сетап для тех, кому нужна скорость в терминале,
-                            читаемый контекст и workflow, который легко переносится между машинами.
-                        </p>
-                    </div>
-
-                    <div class="feature-grid">
-                        <article class="feature-card reveal">
-                            <h3>Ghostty</h3>
-                            <p>
-                                Быстрый, современный терминальный UX с хорошим рендерингом и
-                                приятным ощущением в работе.
-                            </p>
-                        </article>
-                        <article class="feature-card reveal">
-                            <h3>Oh My Zsh</h3>
-                            <p>
-                                Структура shell, полезные плагины и более простое ежедневное
-                                сопровождение.
-                            </p>
-                        </article>
-                        <article class="feature-card reveal">
-                            <h3>Starship</h3>
-                            <p>
-                                Prompt, который проще переносить, поддерживать и понимать, чем
-                                тяжёлые shell-темы.
-                            </p>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="section" id="modules">
-                    <div class="section-heading reveal">
-                        <h2>Структура гайда</h2>
-                        <p>
-                            Полный текст идёт глубже, но именно эти блоки задают основной путь
-                            обучения и сборки конфигурации.
-                        </p>
-                    </div>
-
-                    <div class="module-grid">
-                        <article class="module-card reveal">
-                            <h3>1. Базовые инструменты</h3>
-                            <p>Установка терминала, shell, prompt и основных CLI-инструментов.</p>
-                        </article>
-                        <article class="module-card reveal">
-                            <h3>2. Настройка Ghostty</h3>
-                            <p>
-                                Выбор шрифта, shell integration, простая тема и минимальный конфиг.
-                            </p>
-                        </article>
-                        <article class="module-card reveal">
-                            <h3>3. Oh My Zsh</h3>
-                            <p>
-                                Установка фреймворка без конфликта prompt-тем после подключения
-                                Starship.
-                            </p>
-                        </article>
-                        <article class="module-card reveal">
-                            <h3>4. Starship</h3>
-                            <p>
-                                Инициализация prompt и чистый конфиг, который можно хранить в Git.
-                            </p>
-                        </article>
-                        <article class="module-card reveal">
-                            <h3>5. Плагины и инструменты</h3>
-                            <p>
-                                Меньше, но лучше: Git, Kubernetes, Terraform и cloud-ориентированные
-                                утилиты.
-                            </p>
-                        </article>
-                        <article class="module-card reveal">
-                            <h3>6. Ежедневный workflow</h3>
-                            <p>
-                                Алиасы, helper-функции, проверка результата и практический
-                                troubleshooting.
-                            </p>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="section" id="ai">
-                    <div class="section-heading reveal">
-                        <h2>Где AI реально помогает</h2>
-                        <p>
-                            AI полезен здесь потому, что настройка терминала состоит из множества
-                            мелких решений. Правильное использование AI не в случайной генерации
-                            конфига, а в сокращении пути к сетапу, который подходит вашей роли и
-                            вашим привычкам.
-                        </p>
-                    </div>
-
-                    <div class="detail-grid">
-                        <article class="detail-card reveal">
-                            <h3>Помощь с выбором</h3>
-                            <ul class="detail-list">
-                                <li>Подобрать набор плагинов под DevOps или разработку.</li>
-                                <li>Сравнить prompt-модули и убрать дублирующие инструменты.</li>
-                                <li>Сохранить стек лёгким, а не шумным.</li>
-                            </ul>
-                        </article>
-                        <article class="detail-card reveal">
-                            <h3>Помощь с конфигом</h3>
-                            <ul class="detail-list">
-                                <li>Быстрее собрать `.zshrc` и `starship.toml`.</li>
-                                <li>
-                                    Понять каждую строку shell-конфига до того, как вы её оставите.
-                                </li>
-                                <li>Адаптировать сетап под macOS и Linux.</li>
-                            </ul>
-                        </article>
-                        <article class="detail-card reveal">
-                            <h3>Помощь с проблемами</h3>
-                            <ul class="detail-list">
-                                <li>
-                                    Диагностировать старт shell, лаги prompt, шрифты и конфликты
-                                    плагинов.
-                                </li>
-                                <li>Превратить настройку в документацию и обучающий контент.</li>
-                                <li>
-                                    Сделать из личного workflow публичный образовательный актив.
-                                </li>
-                            </ul>
-                        </article>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <div class="cta-band reveal">
-                        <h3>Используйте гайд как контент, а не только как документацию.</h3>
-                        <p>
-                            Эта страница уже подходит и для вступления к YouTube-видео, и для
-                            учебного репозитория, и для точки входа в личный бренд. Добавьте
-                            mentoring-page как следующий шаг для зрителей, которым нужна помощь.
-                        </p>
-                        <div class="button-row">
-                            <a class="button button--primary" href="../mentoring-offer/"
-                                >Открыть Mentoring Page</a
-                            >
-                            <a class="button button--secondary" href="../readme/">Открыть README</a>
-                        </div>
-                    </div>
-                </section>
-            </main>
+<html lang="ru" data-markdown-source="ghostty-ohmyzsh-starship-dev-setup-other.md">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOpus | Other Guide</title>
+    <meta
+      name="description"
+      content="Other guide page for the Ghostty, Oh My Zsh, and Starship setup, rendered from the source markdown."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="site-header__inner">
+          <a class="brand" href="../">
+            <span class="brand__mark">D</span>
+            <span class="brand__copy">
+              <strong>DevOpus</strong>
+              <span>AI Driven practical and pragmatic DevOps mentorship | Yaroslav Kostiannikov</span>
+            </span>
+          </a>
+          <nav class="nav">
+            <a href="../">Главная</a>
+            <a href="#guide">Гайд</a>
+            <a href="../en/">English</a>
+            <a href="../mentoring-offer/">Offer</a>
+          </nav>
         </div>
-    </body>
+      </header>
+
+      <main class="main">
+        <section class="page-hero">
+          <div class="page-hero__grid">
+            <article class="panel panel--page reveal">
+              <span class="panel__flare panel__flare--warm"></span>
+              <span class="panel__flare panel__flare--cool"></span>
+              <span class="eyebrow">Other guide</span>
+              <h1 class="page-title">Ghostty + Oh My Zsh + Starship для DevOps и разработки ПО</h1>
+              <p class="page-lead">
+                Практический мини-курс по созданию быстрого, чистого и продуктивного терминального окружения.
+                Эта страница рендерит сам markdown-файл, поэтому содержимое не оторвано от репозитория.
+              </p>
+              <div class="button-row">
+                <a class="button button--primary" href="#guide">Читать гайд</a>
+                <a class="button button--secondary" href="../mentoring-offer/">Открыть mentoring offer</a>
+                <a class="button button--ghost" href="../en/">Открыть English version</a>
+              </div>
+            </article>
+
+            <aside class="panel panel--page reveal">
+              <div class="summary-grid">
+                <article class="summary-card">
+                  <h3>Для кого</h3>
+                  <p>Для тех, кто много работает в терминале и хочет получить полезный, быстрый и аккуратный сетап.</p>
+                </article>
+                <article class="summary-card">
+                  <h3>Что вы соберёте</h3>
+                  <p>Ghostty, Zsh, Oh My Zsh, Starship, плагины, CLI-инструменты, алиасы и чистую конфигурацию.</p>
+                </article>
+                <article class="summary-card">
+                  <h3>Форма курса</h3>
+                  <p>Установка, настройка, расширение, проверка результата и troubleshooting в рамках 10 шагов.</p>
+                </article>
+              </div>
+              <div class="chip-row">
+                <span class="chip">Terminal UX</span>
+                <span class="chip">Prompt</span>
+                <span class="chip">Плагины</span>
+                <span class="chip">DevOps workflow</span>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="guide-layout" id="guide">
+          <aside class="guide-sidebar">
+            <div class="panel panel--sidebar reveal">
+              <span class="section-label">Содержание</span>
+              <h2 class="sidebar-title">Карта гайда</h2>
+              <nav class="toc" data-markdown-toc></nav>
+            </div>
+            <div class="panel panel--sidebar reveal">
+              <span class="section-label">Коротко</span>
+              <ul class="summary-list">
+                <li>Практичное руководство без plugin-maximalism</li>
+                <li>Сбалансированный сетап для скорости, ясности и сопровождения</li>
+                <li>Красивая страница, которая следует структуре исходного файла</li>
+              </ul>
+            </div>
+          </aside>
+
+          <article class="guide-main">
+            <div class="markdown-frame reveal">
+              <div class="markdown-status" data-markdown-status>Загрузка содержимого гайда…</div>
+              <div class="prose" data-markdown-content></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
