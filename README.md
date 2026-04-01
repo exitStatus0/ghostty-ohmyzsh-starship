@@ -1,6 +1,6 @@
 # Ghostty + Oh My Zsh + Starship
 
-[English](#english) | [Other](#other)
+[English](#english) | [Українська](#українська) | [Other](#other)
 
 ## English
 
@@ -65,6 +65,7 @@ In other words, AI helps move faster from "I want a better terminal" to "I have 
 ### Project structure
 
 - Detailed setup guide in English: [en/ghostty-ohmyzsh-starship-dev-setup.md](en/ghostty-ohmyzsh-starship-dev-setup.md)
+- Detailed setup guide in Ukrainian: [ua/ghostty-ohmyzsh-starship-dev-setup-ua.md](ua/ghostty-ohmyzsh-starship-dev-setup-ua.md)
 - Detailed setup guide in the Other section: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
 - License: [LICENSE](LICENSE)
 
@@ -73,6 +74,81 @@ In other words, AI helps move faster from "I want a better terminal" to "I have 
 If you want a short positioning text for a video intro, this project can be presented like this:
 
 > In this video, we are building a modern terminal setup for DevOps and software development with Ghostty, Oh My Zsh, and Starship. The goal is not to install everything possible. The goal is to create a terminal that looks clean, starts fast, shows useful context, and helps you work better every single day. We will also look at how AI can help design, improve, and personalize this configuration instead of copying random snippets from the internet.
+
+---
+
+## Українська
+
+Зберіть термінал, який виглядає сучасно, працює швидко і дійсно допомагає вам працювати ефективніше.
+
+Цей проєкт — практичне введення в чисте робоче середовище розробника на основі **Ghostty**, **Zsh**, **Oh My Zsh** та **Starship**. Він створений для людей, які живуть у терміналі та хочуть отримати не просто красиву конфігурацію, а зручний, підтримуваний та корисний інструмент для реальної роботи в DevOps та розробці ПЗ.
+
+Якщо вам потрібен сильний текст для вступу до відео на YouTube, основна думка тут така:
+
+> Термінал — це не просто вікно для команд. Це ваше щоденне робоче середовище, ваша панель управління і місце, де швидкість, ясність та впевненість або зростають, або зникають.
+
+Цей репозиторій показує, як зібрати термінальну конфігурацію, яка відчувається легкою, професійною та масштабованою під різні машини та сценарії роботи.
+
+### Чому цей проєкт важливий
+
+Більшість термінальних налаштувань ламаються в одному з двох сценаріїв:
+
+- вони виглядають вражаюче, але стають повільними та перевантаженими;
+- вони залишаються мінімалістичними, але так і не стають по-справжньому зручними для щоденної роботи.
+
+Цей стек спрямований на корисний баланс:
+
+- **Ghostty** для сучасного термінального досвіду;
+- **Zsh** для потужного shell;
+- **Oh My Zsh** для структури та практичних плагінів;
+- **Starship** для швидкого, чистого та переносимого prompt.
+
+У результаті виходить середовище, яке добре підходить для:
+
+- DevOps-інженерів;
+- розробників ПЗ;
+- SRE та platform engineers;
+- спеціалістів з хмарних технологій та інфраструктури;
+- всіх, хто хоче покращити роботу в терміналі на macOS або Linux.
+
+### Що ви отримаєте
+
+З цим проєктом можна зібрати термінальне середовище, яке дає:
+
+- акуратний візуальний досвід без зайвої складності;
+- shell, яким простіше користуватися та який простіше підтримувати;
+- prompt, що показує корисний контекст без візуального шуму;
+- більш сильну базу для Git, Kubernetes, Terraform, хмарних CLI та щоденних завдань розробки;
+- конфігурацію, яку простіше зберігати в Git та переносити на інші машини.
+
+### Як AI може допомогти зібрати таку конфігурацію
+
+AI особливо корисний при створенні термінальних конфігурацій, оскільки більшості людей не потрібен випадковий набір плагінів. Їм потрібне налаштування, що відповідає їхньому реальному workflow.
+
+AI може допомогти:
+
+- підібрати правильний стек під вашу роль та операційну систему;
+- згенерувати першу версію `.zshrc`, `starship.toml` та налаштувань терміналу;
+- пояснити, що саме робить кожен плагін, аліас або модуль prompt;
+- прибрати зайве та скоротити дублюючі інструменти;
+- діагностувати повільний запуск shell, проблеми зі шрифтами, конфлікти плагінів та помилки конфігурації;
+- адаптувати одне й те саме налаштування для DevOps, backend-розробки, хмарних завдань або загальної продуктивності;
+- перетворити особисту конфігурацію на зрозумілу документацію або навчальний матеріал.
+
+Іншими словами, AI допомагає швидше пройти шлях від «я хочу зручний термінал» до «у мене є чиста, осмислена і реально працююча конфігурація на кожен день».
+
+### Структура проєкту
+
+- Детальний гайд українською: [ua/ghostty-ohmyzsh-starship-dev-setup-ua.md](ua/ghostty-ohmyzsh-starship-dev-setup-ua.md)
+- Детальний гайд англійською: [en/ghostty-ohmyzsh-starship-dev-setup.md](en/ghostty-ohmyzsh-starship-dev-setup.md)
+- Детальний гайд в розділі Other: [other/ghostty-ohmyzsh-starship-dev-setup-other.md](other/ghostty-ohmyzsh-starship-dev-setup-other.md)
+- Ліцензія: [LICENSE](LICENSE)
+
+### Можливий текст для вступу до YouTube-відео
+
+Якщо потрібен короткий позиціонуючий текст для відео, проєкт можна представити так:
+
+> У цьому відео ми збираємо сучасне термінальне налаштування для DevOps та розробки ПЗ на базі Ghostty, Oh My Zsh та Starship. Мета не в тому, щоб встановити все підряд. Мета в тому, щоб отримати термінал, який виглядає чисто, запускається швидко, показує корисний контекст і допомагає працювати краще кожен день. Заодно подивимося, як AI може допомогти спроектувати, покращити та персоналізувати таку конфігурацію замість копіювання випадкових сніпетів з інтернету.
 
 ---
 
